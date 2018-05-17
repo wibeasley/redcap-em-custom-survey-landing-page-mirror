@@ -38,6 +38,9 @@ class CustomSurveyLandingPage extends \ExternalModules\AbstractExternalModule
                 CSLP.surveyUrl = <?php echo json_encode($this->getPublicUrl()); ?>;
                 CSLP.surveyShortUrl = <?php echo json_encode($this->getShortUrl()); ?>;
             </script>
+            <style>
+                code.selectOnClick { cursor: pointer; }
+            </style>
         <?php
         return true;
     }
