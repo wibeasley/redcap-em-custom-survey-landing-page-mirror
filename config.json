@@ -29,7 +29,7 @@
   ],
 
   "no-auth-pages": [
-    "survey.php"
+    "survey"
   ],
 
   "links": {
