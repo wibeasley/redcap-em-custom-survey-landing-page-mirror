@@ -32,11 +32,15 @@ class CustomSurveyLandingPage extends \ExternalModules\AbstractExternalModule
      * @param null $project_id
      * @return bool
      */
-    function redcap_module_configure_button_display($project_id = null) {
-        ?>
+    function xredcap_module_configure_button_display($project_id = null) {
+        $publicUrl = empty($this->getPublicUrl()) ? "''" : json_encode($this->getPublicUrl());
+        $shortUrl = empty($this->getShortUrl()) ? "''" : json_encode($this->getShortUrl());
+
+	?>
             <script type="text/javascript">
-                CSLP.surveyUrl = <?php echo json_encode($this->getPublicUrl()); ?>;
-                CSLP.surveyShortUrl = <?php echo json_encode($this->getShortUrl()); ?>;
+		var CSLP = CSLP || {};
+                CSLP.surveyUrl = <?php echo $publicUrl ?>;
+                CSLP.surveyShortUrl = <?php echo $shortUrl ?>;
             </script>
             <style>
                 code.selectOnClick { cursor: pointer; }
