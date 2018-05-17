@@ -1,0 +1,85 @@
+{
+  "name": "Custom Survey Landing Page",
+
+  "namespace":"Stanford\\CustomSurveyLandingPage",
+
+  "description": "A module for creating a nicer landing page for doing mailers and code entry for surveys",
+
+  "documentation": "README.md",
+
+  "versions": [
+    { "0.1": "Initial Development Version" }
+  ],
+
+  "authors": [
+    {
+      "name": "Andy Martin",
+      "email": "andy123@stanford.edu",
+      "institution": "Stanford University"
+    },
+    {
+      "name": "Jae Lee",
+      "email": "jael@stanford.edu",
+      "institution": "Stanford University"
+    }
+  ],
+
+  "permissions": [
+    "redcap_every_page_top"
+  ],
+
+  "links": {
+    "control-center": [
+    ],
+    "project": [
+      {
+        "name": "Custom Landing Page",
+        "icon": "gear",
+        "url": "survey.php"
+      }
+    ]
+  },
+
+  "system-settings": [
+  ],
+
+  "project-settings": [
+    {
+      "key": "instructions",
+      "name": "<b>INSTRUCTIONS FOR USE</b><br>Use the following urls in place of the default redcap survey url for this page to appear.<div class='urls'></div>",
+      "type": "descriptive"
+    },
+    {
+      "key": "title",
+      "name": "<b>Title (optional)</b><br>Appears at top of input box",
+      "required": false,
+      "type": "text",
+      "source": "config.js",
+      "functionName": "CSLP.init"
+    },
+    {
+      "key": "desc",
+      "name": "<b>Description (optional)</b><br>Appears in middle of box (you can use HTML if you like)",
+      "required": false,
+      "type": "textarea"
+    },
+    {
+      "key": "input-label",
+      "name": "<b>Input Label (optional)</b><br>e.g. 'Enter Survey Code'",
+      "required": false,
+      "type": "text"
+    },
+    {
+      "key": "placeholder",
+      "name": "<b>Placeholder (optional)</b><br>hint to appear in input, e.g. ABC123",
+      "required": false,
+      "type": "text"
+    },
+    {
+      "key": "image",
+      "name": "<b>Background Image (optional)</b><br>Designed for FULL SCREEN - so use something big (jpg/png preferred) - will be white otherwise",
+      "required": false,
+      "type": "file"
+    }
+  ]
+}
