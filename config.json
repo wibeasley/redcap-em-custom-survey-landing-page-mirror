@@ -28,6 +28,10 @@
     "redcap_every_page_top"
   ],
 
+  "no-auth-pages": [
+    "survey.php"
+  ],
+
   "links": {
     "control-center": [
     ],
