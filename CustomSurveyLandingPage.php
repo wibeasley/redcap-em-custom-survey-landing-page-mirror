@@ -73,11 +73,9 @@ class CustomSurveyLandingPage extends \ExternalModules\AbstractExternalModule
             // Try to make one
             $publicUrl = $this->getPublicUrl();
             $publicUrl = str_replace("localhost","redcap.stanford.edu",$publicUrl);
-            // \Plugin::log("publicUrl", $publicUrl);
             $result = \Survey::getCustomShortUrl($publicUrl, false);
 
             if (self::startsWith($result, "Error:")) {
-                \Plugin::log("An Error Occurred Shortening the url: " . $result);
                 $shortUrl = false;
             } else {
                 $shortUrl = $result;
@@ -151,9 +149,6 @@ class CustomSurveyLandingPage extends \ExternalModules\AbstractExternalModule
                     }
                 </style>
             <?php
-
-            \Plugin::log(PAGE); //if (PAGE == "get_access_code.php")
-
         }
     }
 
