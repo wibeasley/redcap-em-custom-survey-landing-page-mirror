@@ -55,6 +55,12 @@ $input_placeholder = $module->getProjectSetting('placeholder');
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        <?php
+            global $project_id;
+            if ($module->getProjectSetting('align-top', $project_id )) {
+                echo "background-position: center top;\n";
+            }
+        ?>
     }
 
     #pagecontainer{

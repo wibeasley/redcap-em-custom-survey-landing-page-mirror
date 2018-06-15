@@ -84,6 +84,12 @@
       "name": "<b>Background Image (optional)</b><br>Designed for FULL SCREEN - so use something big (jpg/png preferred) - will be white otherwise",
       "required": false,
       "type": "file"
+    },
+    {
+      "key": "align-top",
+      "name": "<b>Align Background Image to Top (optional)</b><br>Keep the image aligned vertically to the top when zoomed or on small screens",
+      "required": false,
+      "type": "checkbox"
     }
   ]
 }
