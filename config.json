@@ -39,7 +39,7 @@
       {
         "name": "Custom Landing Page",
         "icon": "gear",
-        "url": "survey.php"
+        "url": "survey.php?NOAUTH"
       }
     ]
   },
